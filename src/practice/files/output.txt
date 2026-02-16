@@ -1,0 +1,3 @@
+Hello World!!
+Buffered Reader is reading from this file.
+output.txt will be populated using the lines of input.txt file.

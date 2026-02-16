@@ -8,6 +8,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.SequencedMap;
 import java.util.Set;
+import java.util.function.IntPredicate;
+import java.util.stream.IntStream;
 import java.util.SequencedSet;
 import practice.A.*;
 
@@ -142,8 +144,10 @@ public class Main {
         // A.nestedStaticA insideA = new A.nestedStaticA();
         // insideA.run();
 
-        A.createNestedClass();
+        // A.createNestedClass();
         
+        int sum = IntStream.generate(()-> (int)(Math.random() * 10)).takeWhile(i-> i!= 3).sum();
+        System.out.println(sum);
 
     }
 }
