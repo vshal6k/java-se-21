@@ -4,7 +4,7 @@ public sealed class B extends A permits C,D{
     int x;
 
     public B(){
-
+        
     }
 
     void aMethod(){
