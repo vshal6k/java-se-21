@@ -7,6 +7,11 @@ public sealed class A implements Serializable permits B {
     public int id;
     public transient String name;
 
+    public A(){
+        id = 0;
+        name = null;
+    }
+
     public A(int id, String name){
         this.id = id;
         this.name = name;

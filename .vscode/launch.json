@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FileHandling",
+            "request": "launch",
+            "mainClass": "practice.FileHandling",
+            "projectName": "java-se-21_c486d8b4"
+        },
+        {
+            "type": "java",
             "name": "CustomSerialization",
             "request": "launch",
             "mainClass": "practice.CustomSerialization",
