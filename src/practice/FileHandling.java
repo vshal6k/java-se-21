@@ -84,9 +84,9 @@ public class FileHandling {
         // System.out.println(bPath.getName(i));
         // }
 
-        Path source = Path.of(".").toRealPath();
-        Files.deleteIfExists(source.resolve("backup"));
-        Path backup = Files.createDirectory(source).toRealPath();
+        // Path source = Path.of(".").toRealPath();
+        // Files.deleteIfExists(source.resolve("backup"));
+        // Path backup = Files.createDirectory(source).toRealPath();
         // System.out.println(backup);
 
         // Files.walk(source.resolve("src")).sorted().forEach(
@@ -100,8 +100,13 @@ public class FileHandling {
         //             System.out.println(backup.resolve(source.relativize(p)));
         //         });
 
-        333
+        // Path source = Path.of("src/practice/root");
+        // source = source.toRealPath();
+        // Files.deleteIfExists(source);
 
+        // Path target = Path.of("src/practice/rootNew");
+
+        // Files.move(target, target.resolveSibling("rootNewSibling"));
     }
 
 }
