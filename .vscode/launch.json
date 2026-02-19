@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ZipHandling",
+            "request": "launch",
+            "mainClass": "practice.ZipHandling",
+            "projectName": "java-se-21_c486d8b4"
+        },
+        {
+            "type": "java",
             "name": "FileHandling",
             "request": "launch",
             "mainClass": "practice.FileHandling",
