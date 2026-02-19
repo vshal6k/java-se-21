@@ -8,32 +8,35 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 
 public class FileHandling {
 
     public static void main() throws IOException {
         // FileSystem fs = FileSystems.getDefault();
         // System.out.println(fs.getSeparator());
-        
+
         // for (FileStore store : FileSystems.getDefault().getFileStores()) {
-        //     // long total = store.getTotalSpace() / 1024;
-        //     // long used = (store.getTotalSpace() - store.getUnallocatedSpace()) / 1024;
-        //     // long avail = store.getUsableSpace() / 1024;
-        //     // System.out.format("%-20s %12d %12d %12d%n", store, total, used, avail);
-        //     System.out.println(store.name());
+        // // long total = store.getTotalSpace() / 1024;
+        // // long used = (store.getTotalSpace() - store.getUnallocatedSpace()) / 1024;
+        // // long avail = store.getUsableSpace() / 1024;
+        // // System.out.format("%-20s %12d %12d %12d%n", store, total, used, avail);
+        // System.out.println(store.name());
         // }
 
-        // Path sourceDirectory = Path.of("/Users", "vishalkushwaha", "Documents", "Java SE 21", "java-se-21");
+        // Path sourceDirectory = Path.of("/Users", "vishalkushwaha", "Documents", "Java
+        // SE 21", "java-se-21");
         // System.out.println(Files.exists(sourceDirectory));
 
         // // Files.list(sourceDirectory).forEach(x -> System.out.println(x));
-        // // Files.walk(sourceDirectory).filter(p -> p.toString().contains(".java")).forEach(x -> System.out.println(x));
+        // // Files.walk(sourceDirectory).filter(p ->
+        // p.toString().contains(".java")).forEach(x -> System.out.println(x));
 
-        // Path aPath = Path.of("/Users", "vishalkushwaha", "Documents", "Java SE 21", "java-se-21", "src", "practice", "A.java");
+        // Path aPath = Path.of("/Users", "vishalkushwaha", "Documents", "Java SE 21",
+        // "java-se-21", "src", "practice", "A.java");
         // Path aPathReal = aPath.toRealPath();
 
         // Path messagesBundle = aPath.resolve("../resources/messages.properties");
-        
 
         // System.out.println(Files.exists(messagesBundle));
 
@@ -69,15 +72,35 @@ public class FileHandling {
         // System.out.println(symbolicLinkToB);
         // Files.deleteIfExists(symbolicLinkToB);
         // System.out.println(symbolicLinkToB.getParent().relativize(bPath));
-        // // System.out.println(symbolicLinkToB.resolve(symbolicLinkToB.relativize(bPath)));
-        // Files.createSymbolicLink(symbolicLinkToB, symbolicLinkToB.getParent().relativize(bPath));
+        // //
+        // System.out.println(symbolicLinkToB.resolve(symbolicLinkToB.relativize(bPath)));
+        // Files.createSymbolicLink(symbolicLinkToB,
+        // symbolicLinkToB.getParent().relativize(bPath));
         // System.out.println(Files.readSymbolicLink(symbolicLinkToB));
 
         // Path bPath = Path.of("src/practice/B.java");
         // bPath = bPath.toRealPath();
         // for (int i = 0; i < bPath.getNameCount(); i++) {
-        //     System.out.println(bPath.getName(i));
+        // System.out.println(bPath.getName(i));
         // }
+
+        Path source = Path.of(".").toRealPath();
+        Files.deleteIfExists(source.resolve("backup"));
+        Path backup = Files.createDirectory(source).toRealPath();
+        // System.out.println(backup);
+
+        // Files.walk(source.resolve("src")).sorted().forEach(
+        //         p -> {
+        //             try {
+        //                 Files.copy(p, backup.resolve(source.relativize(p)));
+        //             } catch (IOException e) {
+        //                 e.printStackTrace();
+        //             }
+        //             System.out.println(p);
+        //             System.out.println(backup.resolve(source.relativize(p)));
+        //         });
+
+        333
 
     }
 
