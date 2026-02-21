@@ -12,7 +12,7 @@ public class ExecutorServiceLearning {
     public static Runnable sleepingRunnable = () -> {
         try {
             System.out.println("A Thread Started");
-            Thread.sleep(1000);
+            Thread.sleep(10000);
             // System.out.println("A Thread Completed");
         } catch (InterruptedException e) {
             // e.printStackTrace();
@@ -59,17 +59,18 @@ public class ExecutorServiceLearning {
         //     e.printStackTrace();
         // }
 
-        ScheduledExecutorService ses = Executors.newSingleThreadScheduledExecutor();
-        ScheduledFuture sf = ses.scheduleAtFixedRate(sleepingRunnable, 2, 2, TimeUnit.SECONDS);
-        try {
-            sf.getDelay(TimeUnit.SECONDS);
-            Thread.sleep(5000);
-            System.out.println(sf.cancel(true));
-            // System.out.println(sf.exceptionNow());
-            // ses.shutdownNow();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        ScheduledExecutorService ses = Executors.newScheduledThreadPool(5);
+        ScheduledFuture sf = ses.scheduleAtFixedRate(sleepingRunnable, 0, 1, TimeUnit.SECONDS);
+        ScheduledExecutorService es = Executors.unconfigurableScheduledExecutorService(ses);
+        // try {
+        //     sf.getDelay(TimeUnit.SECONDS);
+        //     Thread.sleep(5000);
+        //     System.out.println(sf.cancel(true));
+        //     // System.out.println(sf.exceptionNow());
+        //     // ses.shutdownNow();
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
     }
 
 }
