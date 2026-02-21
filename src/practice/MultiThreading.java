@@ -48,8 +48,13 @@ public class MultiThreading {
         // new Thread(printhelloWorld).start();
         // }
         // new HelloWorldPrinter().start();
-        // Thread sleepingThread = new Thread(sleepingRunnable);
+        // Thread sleepingThread = new Thread(sleepingRunnable, "Vishal's Sleeping Thread");
         // System.out.println(sleepingThread.getState());
+        // System.out.println(sleepingThread.threadId());
+        // System.out.println(sleepingThread.getName());
+        // System.out.println(sleepingThread.isDaemon());
+        // sleepingThread.setDaemon(true);
+        // System.out.println(sleepingThread.isDaemon());
         // sleepingThread.start();
         // Thread.sleep(3000);
         // System.out.println(sleepingThread.getState());
@@ -63,39 +68,39 @@ public class MultiThreading {
         // System.out.println(runningThread.getState());
         // System.out.println(runningThread.isInterrupted());
 
-        Thread t1 = new Thread(synchronisedRunnable);
-        Thread t2 = new Thread(synchronisedRunnable);
-        Thread t3 = new Thread(synchronisedRunnable);
+        // Thread t1 = new Thread(synchronisedRunnable);
+        // Thread t2 = new Thread(synchronisedRunnable);
+        // Thread t3 = new Thread(synchronisedRunnable);
 
-        t1.start();
-        t2.start();
-        t3.start();
+        // t1.start();
+        // t2.start();
+        // t3.start();
 
-        Thread.sleep(1000);
+        // Thread.sleep(1000);
 
-        System.out.println();
-        System.out.println(t1.toString() + t1.getState());
-        System.out.println(t2.toString() + t2.getState());
-        System.out.println(t3.toString() + t3.getState());
-        System.out.println();
-        Thread.sleep(500);
+        // System.out.println();
+        // System.out.println(t1.toString() + t1.getState());
+        // System.out.println(t2.toString() + t2.getState());
+        // System.out.println(t3.toString() + t3.getState());
+        // System.out.println();
+        // Thread.sleep(500);
 
-        synchronized(monitor){
-            monitor.notifyAll();
-        }
+        // synchronized(monitor){
+        //     monitor.notifyAll();
+        // }
         
-        while (true) {
-            System.out.println();
-            System.out.println(t1.toString() + t1.getState());
-            System.out.println(t2.toString() + t2.getState());
-            System.out.println(t3.toString() + t3.getState());
-            System.out.println();
-            Thread.sleep(500);
-            if (t1.isAlive() || t2.isAlive() || t3.isAlive())
-                continue;
-            else
-                break;
-        }
+        // while (true) {
+        //     System.out.println();
+        //     System.out.println(t1.toString() + t1.getState());
+        //     System.out.println(t2.toString() + t2.getState());
+        //     System.out.println(t3.toString() + t3.getState());
+        //     System.out.println();
+        //     Thread.sleep(500);
+        //     if (t1.isAlive() || t2.isAlive() || t3.isAlive())
+        //         continue;
+        //     else
+        //         break;
+        // }
     }
 
 }
