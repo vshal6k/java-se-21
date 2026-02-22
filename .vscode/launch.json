@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VirtualThreads",
+            "request": "launch",
+            "mainClass": "practice.VirtualThreads",
+            "projectName": "java-se-21_55bea086"
+        },
+        {
+            "type": "java",
+            "name": "ThreadSafety",
+            "request": "launch",
+            "mainClass": "practice.ThreadSafety",
+            "projectName": "java-se-21_55bea086"
+        },
+        {
+            "type": "java",
             "name": "ExecutorServiceLearning",
             "request": "launch",
             "mainClass": "practice.ExecutorServiceLearning",
