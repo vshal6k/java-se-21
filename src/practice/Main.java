@@ -15,6 +15,9 @@ import practice.A.*;
 
 public class Main {
     public static void main(String[] args) {
+
+        System.out.printf("%s%n", 11313);
+        
         // A a = new A();
         // A a = new B();
         // A a = new C();
@@ -146,8 +149,10 @@ public class Main {
 
         // A.createNestedClass();
         
-        int sum = IntStream.generate(()-> (int)(Math.random() * 10)).takeWhile(i-> i!= 3).sum();
-        System.out.println(sum);
+        // int sum = IntStream.generate(()-> (int)(Math.random() * 10)).takeWhile(i-> i!= 3).sum();
+        // System.out.println(sum);
+
+        
 
     }
 }
